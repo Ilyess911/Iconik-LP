@@ -3,7 +3,7 @@ import { NavItem, ServiceFeature, Step, StatItem, TimelineStep } from './types';
 
 export const NAV_ITEMS: NavItem[] = [
   { label: 'Achat / Vente', href: '#services' },
-  { label: 'Recherche Personnalisée', href: '#sourcing' },
+  { label: 'Recherche personnalisée', href: '#recherche' },
   { label: 'Conciergerie', href: '#concierge' },
   { label: 'Process', href: '#process' },
   { label: 'Contact', href: '#contact' },

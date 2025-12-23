@@ -7,7 +7,6 @@ import Concierge from './components/Concierge';
 import Process from './components/Process';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
-import ScrollProgressCar from './components/ui/ScrollProgressCar';
 import { MessageCircle } from 'lucide-react';
 
 const App: React.FC = () => {
@@ -34,9 +33,6 @@ const App: React.FC = () => {
       <Contact prefillMessage="" />
       <Footer />
       
-      {/* The Animated Car Progress Bar */}
-      <ScrollProgressCar />
-
       {/* Sticky WhatsApp CTA */}
       <a
         href="https://wa.me/33663472173"

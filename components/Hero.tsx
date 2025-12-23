@@ -55,14 +55,14 @@ const Hero: React.FC = () => {
             Faire de chaque vente une expérience <span className="text-white font-medium shadow-white/20 drop-shadow-lg">ICONIK</span>.
             <br />
             <span className="text-sm text-zinc-500 mt-4 block border-t border-white/10 pt-4 w-fit mx-auto px-8">
-                Sourcing • Achat • Vente • Conciergerie
+                Recherche • Achat • Vente • Conciergerie
             </span>
           </p>
         </Reveal>
 
         <Reveal width="100%" delay={0.5}>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-6">
-            <Button onClick={() => document.getElementById('sourcing')?.scrollIntoView({ behavior: 'smooth' })}>
+            <Button onClick={() => document.getElementById('recherche')?.scrollIntoView({ behavior: 'smooth' })}>
               Démarrer une recherche
               <ArrowRight className="w-4 h-4 ml-1 transition-transform group-hover:translate-x-1" />
             </Button>

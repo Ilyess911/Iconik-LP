@@ -8,13 +8,13 @@ const SourcingStepper: React.FC = () => {
   const googleFormUrl = "https://forms.gle/5tTQHyZrWU2v83nh7";
 
   return (
-    <Section id="sourcing" className="bg-surfaceHighlight/20" pattern="grid">
+    <Section id="recherche" className="bg-surfaceHighlight/20" pattern="grid">
       <div className="max-w-5xl mx-auto">
         
         <div className="text-center mb-16">
           <Reveal width="100%">
-            <span className="text-zinc-500 text-xs font-medium tracking-[0.2em] uppercase mb-4 block">Chasse Automobile</span>
-            <h2 className="text-3xl md:text-5xl font-bold text-white mb-6">Recherche Personnalisée</h2>
+            <span className="text-zinc-500 text-xs font-medium tracking-[0.2em] uppercase mb-4 block">Chasse automobile</span>
+            <h2 className="text-3xl md:text-5xl font-bold text-white mb-6">Recherche personnalisée</h2>
             <p className="text-zinc-400 max-w-2xl mx-auto text-lg">
                 Vous avez une idée précise en tête ? Confiez-nous vos critères. Nous activons notre réseau européen pour trouver la perle rare qui correspond exactement à vos attentes.
             </p>
@@ -35,7 +35,7 @@ const SourcingStepper: React.FC = () => {
                                     <SlidersHorizontal className="w-5 h-5 text-white" />
                                 </div>
                                 <div>
-                                    <h4 className="text-white font-bold mb-1">Configuration Sur Mesure</h4>
+                                    <h4 className="text-white font-bold mb-1">Configuration sur mesure</h4>
                                     <p className="text-zinc-400 text-sm">Définissez vos options, couleurs, motorisation et kilométrage idéal.</p>
                                 </div>
                             </div>
@@ -44,7 +44,7 @@ const SourcingStepper: React.FC = () => {
                                     <Search className="w-5 h-5 text-white" />
                                 </div>
                                 <div>
-                                    <h4 className="text-white font-bold mb-1">Sourcing Européen</h4>
+                                    <h4 className="text-white font-bold mb-1">Réseau Européen</h4>
                                     <p className="text-zinc-400 text-sm">Accès aux marchés cachés et aux stocks hors-marché (off-market).</p>
                                 </div>
                             </div>
@@ -53,7 +53,7 @@ const SourcingStepper: React.FC = () => {
                                     <Target className="w-5 h-5 text-white" />
                                 </div>
                                 <div>
-                                    <h4 className="text-white font-bold mb-1">Zéro Mauvaise Surprise</h4>
+                                    <h4 className="text-white font-bold mb-1">Zéro Mauvaise surprise</h4>
                                     <p className="text-zinc-400 text-sm">Inspection physique systématique et rapport détaillé avant achat.</p>
                                 </div>
                             </div>
@@ -74,7 +74,8 @@ const SourcingStepper: React.FC = () => {
 
                     {/* Right side visual */}
                     <div className="relative h-full min-h-[300px] rounded-2xl overflow-hidden border border-white/10 shadow-2xl">
-                        <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1552519507-da3b142c6e3d?q=80&w=2070&auto=format&fit=crop')] bg-cover bg-center transition-transform duration-700 group-hover:scale-105" />
+                        {/* Renault Clio V Image */}
+                        <div className="absolute inset-0 bg-[url('https://i.postimg.cc/mDcGKK4N/Capture-d-e-cran-2025-12-23-a-18-43-42.png')] bg-cover bg-center transition-transform duration-700 group-hover:scale-105" />
                         <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent" />
                         
                         <div className="absolute bottom-6 left-6 right-6">
@@ -83,7 +84,7 @@ const SourcingStepper: React.FC = () => {
                                     <span className="text-xs font-medium text-zinc-300 uppercase tracking-wider">Dernière Recherche</span>
                                     <span className="w-2 h-2 rounded-full bg-green-500 animate-pulse" />
                                 </div>
-                                <div className="text-white font-bold text-lg">Porsche 911 (992) GT3</div>
+                                <div className="text-white font-bold text-lg">Renault Clio V Intens</div>
                                 <div className="text-zinc-400 text-sm">Recherche validée en 48h</div>
                             </div>
                         </div>
