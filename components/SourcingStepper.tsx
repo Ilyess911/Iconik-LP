@@ -1,70 +1,96 @@
 import React from 'react';
 import Section from './ui/Section';
 import Button from './ui/Button';
-import { ExternalLink, Search, Target, Sparkles } from 'lucide-react';
+import Reveal from './ui/Reveal';
+import { ArrowRight, Search, SlidersHorizontal, Target } from 'lucide-react';
 
 const SourcingStepper: React.FC = () => {
-  const handleRedirect = () => {
-      window.open('https://forms.gle/5tTQHyZrWU2v83nh7', '_blank');
-  };
+  const googleFormUrl = "https://forms.gle/5tTQHyZrWU2v83nh7";
 
   return (
-    <Section id="sourcing" className="bg-surfaceHighlight/30" pattern="grid">
+    <Section id="sourcing" className="bg-surfaceHighlight/20" pattern="grid">
       <div className="max-w-5xl mx-auto">
         
         <div className="text-center mb-16">
-          <span className="text-zinc-500 text-sm font-medium tracking-widest uppercase mb-2 block">Sur Mesure</span>
-          <h2 className="text-3xl md:text-5xl font-bold text-white mb-6">Recherche Personnalisée</h2>
-          <p className="text-zinc-400 text-lg max-w-2xl mx-auto">
-            Vous cherchez une configuration introuvable ? Une édition limitée ? <br/>
-            Dites-nous ce que vous voulez, nous parcourons le marché pour vous.
-          </p>
+          <Reveal width="100%">
+            <span className="text-zinc-500 text-xs font-medium tracking-[0.2em] uppercase mb-4 block">Chasse Automobile</span>
+            <h2 className="text-3xl md:text-5xl font-bold text-white mb-6">Recherche Personnalisée</h2>
+            <p className="text-zinc-400 max-w-2xl mx-auto text-lg">
+                Vous avez une idée précise en tête ? Confiez-nous vos critères. Nous activons notre réseau européen pour trouver la perle rare qui correspond exactement à vos attentes.
+            </p>
+          </Reveal>
         </div>
 
-        {/* Hero Card */}
-        <div className="relative overflow-hidden rounded-3xl bg-black border border-white/10 p-8 md:p-16 text-center group">
-            {/* Background Effects */}
-            <div className="absolute top-0 left-0 w-full h-full bg-[radial-gradient(circle_at_50%_0%,rgba(255,255,255,0.05),transparent_70%)] pointer-events-none" />
-            <div className="absolute -right-20 -top-20 w-96 h-96 bg-white/5 rounded-full blur-[100px] pointer-events-none group-hover:bg-white/10 transition-colors duration-700" />
-            
-            <div className="relative z-10 flex flex-col items-center">
-                <div className="w-20 h-20 rounded-2xl bg-white/5 border border-white/10 flex items-center justify-center mb-8 shadow-[0_0_30px_-5px_rgba(255,255,255,0.1)]">
-                    <Search className="w-10 h-10 text-white" strokeWidth={1.5} />
-                </div>
-
-                <h3 className="text-3xl md:text-4xl font-bold text-white mb-6">
-                    Votre temps est précieux.
-                </h3>
+        <Reveal width="100%" delay={0.2}>
+            <div className="glass-panel-heavy rounded-[32px] p-8 md:p-12 relative overflow-hidden group">
                 
-                <div className="grid md:grid-cols-3 gap-8 mb-12 w-full max-w-3xl text-left">
-                    <div className="p-6 rounded-2xl bg-white/5 border border-white/5 hover:border-white/10 transition-colors">
-                        <Target className="w-6 h-6 text-zinc-300 mb-4" />
-                        <h4 className="text-white font-semibold mb-2">Ciblage Précis</h4>
-                        <p className="text-sm text-zinc-400">Nous filtrons 99% du marché pour ne retenir que l'excellence.</p>
-                    </div>
-                    <div className="p-6 rounded-2xl bg-white/5 border border-white/5 hover:border-white/10 transition-colors">
-                        <Sparkles className="w-6 h-6 text-zinc-300 mb-4" />
-                        <h4 className="text-white font-semibold mb-2">Off Market</h4>
-                        <p className="text-sm text-zinc-400">Accès à des véhicules exclusifs avant leur mise en ligne officielle.</p>
-                    </div>
-                     <div className="p-6 rounded-2xl bg-white/5 border border-white/5 hover:border-white/10 transition-colors">
-                        <ExternalLink className="w-6 h-6 text-zinc-300 mb-4" />
-                        <h4 className="text-white font-semibold mb-2">Simplicité</h4>
-                        <p className="text-sm text-zinc-400">Un formulaire unique pour déclencher notre force de frappe.</p>
-                    </div>
-                </div>
+                {/* Decorative Background Elements */}
+                <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-gradient-to-b from-white/5 to-transparent rounded-full blur-[100px] -translate-y-1/2 translate-x-1/2 pointer-events-none" />
+                
+                <div className="grid md:grid-cols-2 gap-12 items-center relative z-10">
+                    <div className="space-y-8">
+                        <div className="space-y-6">
+                            <div className="flex items-start gap-4">
+                                <div className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center shrink-0">
+                                    <SlidersHorizontal className="w-5 h-5 text-white" />
+                                </div>
+                                <div>
+                                    <h4 className="text-white font-bold mb-1">Configuration Sur Mesure</h4>
+                                    <p className="text-zinc-400 text-sm">Définissez vos options, couleurs, motorisation et kilométrage idéal.</p>
+                                </div>
+                            </div>
+                            <div className="flex items-start gap-4">
+                                <div className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center shrink-0">
+                                    <Search className="w-5 h-5 text-white" />
+                                </div>
+                                <div>
+                                    <h4 className="text-white font-bold mb-1">Sourcing Européen</h4>
+                                    <p className="text-zinc-400 text-sm">Accès aux marchés cachés et aux stocks hors-marché (off-market).</p>
+                                </div>
+                            </div>
+                            <div className="flex items-start gap-4">
+                                <div className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center shrink-0">
+                                    <Target className="w-5 h-5 text-white" />
+                                </div>
+                                <div>
+                                    <h4 className="text-white font-bold mb-1">Zéro Mauvaise Surprise</h4>
+                                    <p className="text-zinc-400 text-sm">Inspection physique systématique et rapport détaillé avant achat.</p>
+                                </div>
+                            </div>
+                        </div>
 
-                <div className="animate-in fade-in slide-in-from-bottom-4 duration-700 delay-300">
-                    <Button onClick={handleRedirect} className="text-lg px-10 py-4">
-                        Lancer ma recherche maintenant
-                        <ExternalLink className="w-5 h-5 ml-2 opacity-60" />
-                    </Button>
-                    <p className="mt-4 text-xs text-zinc-500">
-                        Redirection sécurisée vers notre formulaire de critères
-                    </p>
+                        <div className="pt-4">
+                             <a href={googleFormUrl} target="_blank" rel="noopener noreferrer">
+                                <Button className="!px-8 !py-4 text-base shadow-xl hover:shadow-2xl hover:scale-105 transition-all">
+                                    Démarrer ma recherche
+                                    <ArrowRight className="w-5 h-5 ml-2" />
+                                </Button>
+                             </a>
+                             <p className="mt-4 text-xs text-zinc-500">
+                                Formulaire sécurisé • Réponse sous 24h
+                             </p>
+                        </div>
+                    </div>
+
+                    {/* Right side visual */}
+                    <div className="relative h-full min-h-[300px] rounded-2xl overflow-hidden border border-white/10 shadow-2xl">
+                        <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1552519507-da3b142c6e3d?q=80&w=2070&auto=format&fit=crop')] bg-cover bg-center transition-transform duration-700 group-hover:scale-105" />
+                        <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent" />
+                        
+                        <div className="absolute bottom-6 left-6 right-6">
+                            <div className="glass-panel p-4 rounded-xl border border-white/10">
+                                <div className="flex justify-between items-center mb-2">
+                                    <span className="text-xs font-medium text-zinc-300 uppercase tracking-wider">Dernière Recherche</span>
+                                    <span className="w-2 h-2 rounded-full bg-green-500 animate-pulse" />
+                                </div>
+                                <div className="text-white font-bold text-lg">Porsche 911 (992) GT3</div>
+                                <div className="text-zinc-400 text-sm">Recherche validée en 48h</div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
-        </div>
+        </Reveal>
 
       </div>
     </Section>

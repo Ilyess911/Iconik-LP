@@ -16,15 +16,48 @@
               sans: ['Inter', 'sans-serif'],
             },
             colors: {
-              background: '#050505',
+              background: '#000000',
               surface: '#0F0F11',
               surfaceHighlight: '#18181B',
-              border: 'rgba(255, 255, 255, 0.08)',
+              border: 'rgba(255, 255, 255, 0.1)',
               accent: '#E2E8F0', // Slate 200
             },
             backgroundImage: {
               'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
-              'glass': 'linear-gradient(145deg, rgba(255,255,255,0.05) 0%, rgba(255,255,255,0.01) 100%)',
+              'glass': 'linear-gradient(145deg, rgba(255,255,255,0.07) 0%, rgba(255,255,255,0.03) 100%)',
+              'shine': 'linear-gradient(45deg, transparent 25%, rgba(255,255,255,0.1) 50%, transparent 75%)',
+            },
+            animation: {
+              'spotlight': 'spotlight 2s ease .75s 1 forwards',
+              'shimmer': 'shimmer 2s linear infinite',
+              'fade-up': 'fadeUp 0.8s ease-out forwards',
+              'headlight-on': 'headlightOn 1.5s ease-out 0.5s forwards',
+              'hazards': 'hazards 1s step-end 2', // Blinks twice
+            },
+            keyframes: {
+              spotlight: {
+                '0%': { opacity: 0, transform: 'translate(-50%, -150%) scale(0.5)' },
+                '100%': { opacity: 1, transform: 'translate(-50%, 0) scale(1)' },
+              },
+              shimmer: {
+                '0%': { backgroundPosition: '200% 0' },
+                '100%': { backgroundPosition: '-200% 0' },
+              },
+              fadeUp: {
+                '0%': { opacity: 0, transform: 'translateY(20px)' },
+                '100%': { opacity: 1, transform: 'translateY(0)' },
+              },
+              headlightOn: {
+                '0%': { opacity: 0, transform: 'scaleY(0)' },
+                '10%': { opacity: 0.8, transform: 'scaleY(0.2)' }, // Flash init
+                '20%': { opacity: 0.1, transform: 'scaleY(0.2)' }, // Flicker
+                '30%': { opacity: 0.8, transform: 'scaleY(1)' }, // Full beam
+                '100%': { opacity: 0.6, transform: 'scaleY(1)' }, // Stable
+              },
+              hazards: {
+                '0%, 50%, 100%': { opacity: 0 },
+                '25%, 75%': { opacity: 1, boxShadow: '0 0 15px 2px #f97316' }, // Orange glow
+              }
             }
           }
         }
@@ -32,22 +65,64 @@
     </script>
     <style>
       body {
-        background-color: #050505;
+        background-color: #000000;
         color: #F4F4F5;
+        overflow-x: hidden;
       }
       /* Custom Scrollbar */
       ::-webkit-scrollbar {
-        width: 8px;
+        width: 6px;
       }
       ::-webkit-scrollbar-track {
-        background: #050505;
+        background: #000000;
       }
       ::-webkit-scrollbar-thumb {
         background: #333;
-        border-radius: 4px;
+        border-radius: 3px;
       }
       ::-webkit-scrollbar-thumb:hover {
         background: #555;
+      }
+      
+      /* iOS Glass Effect */
+      .glass-panel {
+        background: rgba(255, 255, 255, 0.03);
+        backdrop-filter: blur(20px) saturate(180%);
+        -webkit-backdrop-filter: blur(20px) saturate(180%);
+        border: 1px solid rgba(255, 255, 255, 0.08);
+        box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+      }
+
+      .glass-panel-heavy {
+        background: rgba(10, 10, 10, 0.6);
+        backdrop-filter: blur(40px) saturate(180%);
+        -webkit-backdrop-filter: blur(40px) saturate(180%);
+        border: 1px solid rgba(255, 255, 255, 0.12);
+      }
+
+      /* Reduced Motion */
+      @media (prefers-reduced-motion: reduce) {
+        *, ::before, ::after {
+          animation-duration: 0.01ms !important;
+          animation-iteration-count: 1 !important;
+          transition-duration: 0.01ms !important;
+          scroll-behavior: auto !important;
+        }
+      }
+
+      /* Volumetric Light Helper */
+      .beam-cone {
+        background: conic-gradient(from 0deg at 50% 100%, transparent 160deg, rgba(255,255,255,0.15) 180deg, transparent 200deg);
+        filter: blur(20px);
+        transform-origin: bottom center;
+      }
+
+      /* Utilities */
+      .perspective-1000 {
+        perspective: 1000px;
+      }
+      .backface-hidden {
+        backface-visibility: hidden;
       }
     </style>
   <script type="importmap">
