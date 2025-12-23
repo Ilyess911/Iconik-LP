@@ -1,5 +1,5 @@
 import { Car, Search, ShieldCheck, Key, Settings, FileCheck, Zap, Gauge, Armchair } from 'lucide-react';
-import { NavItem, ServiceFeature, Step, StatItem, TimelineStep } from './types';
+import { NavItem, ServiceFeature, StatItem, TimelineStep } from './types';
 
 export const NAV_ITEMS: NavItem[] = [
   { label: 'Achat / Vente', href: '#services' },
