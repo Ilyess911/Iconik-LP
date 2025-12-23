@@ -55,7 +55,7 @@ const Hero: React.FC = () => {
             Faire de chaque vente une expérience <span className="text-white font-medium shadow-white/20 drop-shadow-lg">ICONIK</span>.
             <br />
             <span className="text-sm text-zinc-500 mt-4 block border-t border-white/10 pt-4 w-fit mx-auto px-8">
-                Recherche • Achat • Vente • Conciergerie
+                Recherche personnalisée • Achat • Vente • Conciergerie
             </span>
           </p>
         </Reveal>
