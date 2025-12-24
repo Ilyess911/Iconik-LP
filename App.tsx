@@ -14,8 +14,8 @@ const App: React.FC = () => {
 
   useEffect(() => {
     const handleScroll = () => {
-      // Show after scrolling 35% of page
-      const threshold = document.documentElement.scrollHeight * 0.35;
+      // Show after scrolling 20% of page (faster trigger)
+      const threshold = document.documentElement.scrollHeight * 0.2;
       setShowWhatsApp(window.scrollY > threshold);
     };
     window.addEventListener('scroll', handleScroll);
@@ -39,12 +39,13 @@ const App: React.FC = () => {
         target="_blank"
         rel="noopener noreferrer"
         aria-label="Contacter sur WhatsApp"
-        className={`fixed bottom-6 right-6 z-40 flex items-center gap-3 bg-[#25D366] text-white px-5 py-3.5 rounded-full shadow-[0_10px_30px_-5px_rgba(37,211,102,0.4)] transition-all duration-500 ease-out hover:scale-105 hover:bg-[#20bd5a] group ${
+        className={`fixed bottom-6 right-6 z-40 flex items-center gap-3 bg-[#25D366] text-white px-4 py-3 md:px-6 md:py-3.5 rounded-full shadow-[0_4px_20px_rgba(37,211,102,0.4)] transition-all duration-500 ease-out hover:scale-105 hover:bg-[#20bd5a] hover:shadow-[0_4px_30px_rgba(37,211,102,0.6)] group ${
           showWhatsApp ? 'translate-y-0 opacity-100' : 'translate-y-20 opacity-0 pointer-events-none'
         }`}
       >
-        <MessageCircle className="w-5 h-5 fill-current" />
-        <span className="font-semibold pr-1 hidden md:inline-block">WhatsApp</span>
+        <MessageCircle className="w-6 h-6 fill-current md:w-5 md:h-5" />
+        {/* Text shown on Desktop for clarity */}
+        <span className="font-semibold pr-1 hidden md:inline-block">Parler à un expert</span>
       </a>
     </main>
   );

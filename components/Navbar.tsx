@@ -88,9 +88,10 @@ const Navbar: React.FC = () => {
         
         {/* CTA Button */}
         <div className="hidden md:block">
+           {/* Upgraded to Primary variant for better visibility */}
            <Button 
-                variant="secondary" 
-                className={`!py-2.5 !px-6 !text-xs backdrop-blur-md transition-all duration-500 ${isScrolled ? 'shadow-lg border-white/20' : ''}`} 
+                variant="primary" 
+                className={`!py-2.5 !px-6 !text-xs transition-all duration-500 ${isScrolled ? 'shadow-lg' : ''}`} 
                 onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth'})}
             >
              Prendre RDV

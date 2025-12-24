@@ -1,7 +1,9 @@
 import React from 'react';
 import Section from './ui/Section';
+import Button from './ui/Button';
 import { TIMELINE_STEPS } from '../constants';
 import Reveal from './ui/Reveal';
+import { ArrowRight } from 'lucide-react';
 
 const Process: React.FC = () => {
   return (
@@ -16,7 +18,7 @@ const Process: React.FC = () => {
         </Reveal>
       </div>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 relative">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 relative mb-16">
         {/* Connecting Line (Desktop) */}
         <div className="hidden lg:block absolute top-12 left-0 right-0 h-px bg-gradient-to-r from-transparent via-white/10 to-transparent" />
 
@@ -34,6 +36,19 @@ const Process: React.FC = () => {
           </Reveal>
         ))}
       </div>
+
+      <Reveal width="100%" delay={0.6}>
+        <div className="text-center">
+             <Button 
+                onClick={() => document.getElementById('recherche')?.scrollIntoView({ behavior: 'smooth' })}
+                className="!px-10 !py-5 text-lg"
+             >
+                Lancer ma recherche maintenant
+                <ArrowRight className="w-5 h-5 ml-2" />
+             </Button>
+             <p className="mt-4 text-xs text-zinc-500">Sans engagement • Réponse rapide</p>
+        </div>
+      </Reveal>
     </Section>
   );
 };
