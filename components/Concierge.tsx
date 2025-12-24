@@ -16,7 +16,8 @@ const Concierge: React.FC = () => {
           </Reveal>
           <Reveal delay={0.1}>
             <p className="text-zinc-400 text-lg mb-12 leading-relaxed">
-                Profitez de votre véhicule, nous gérons le reste. De la maintenance administrative à la logistique physique, notre service de conciergerie vous libère des contraintes.
+                Profitez pleinement de votre véhicule. <br className="hidden md:block" />
+                Nous prenons en charge l’ensemble des démarches, de l’administratif à la logistique, pour une expérience sans contraintes et sans perte de temps.
             </p>
           </Reveal>
           
@@ -35,6 +36,12 @@ const Concierge: React.FC = () => {
               </Reveal>
             ))}
           </div>
+
+          <Reveal delay={0.5}>
+            <p className="text-xs text-zinc-600 mt-6 italic">
+              * Le service de gardiennage est proposé selon disponibilité.
+            </p>
+          </Reveal>
         </div>
 
         {/* Visual Decoration */}

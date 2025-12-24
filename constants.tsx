@@ -10,15 +10,15 @@ export const NAV_ITEMS: NavItem[] = [
 ];
 
 export const BUY_SELL_FEATURES: ServiceFeature[] = [
-  { title: "Historique Limpide", description: "Traçabilité complète, factures, et origine vérifiée.", icon: FileCheck },
-  { title: "Inspection 110 Points", description: "Audit mécanique, esthétique et consommables.", icon: Search },
-  { title: "Interlocuteur Unique", description: "Un expert dédié du premier appel à la livraison.", icon: ShieldCheck },
+  { title: "Historique limpide", description: "Origine, factures et traçabilité intégrale vérifiées en amont.", icon: FileCheck },
+  { title: "Inspection 110 points", description: "Audit complet : mécanique, esthétique et éléments d’usure.", icon: Search },
+  { title: "Interlocuteur unique", description: "Un expert Iconik dédié, présent à chaque étape jusqu’à la livraison.", icon: ShieldCheck },
 ];
 
 export const CONCIERGE_FEATURES: ServiceFeature[] = [
-  { title: "Administratif", description: "Carte grise, assurance, import, WW.", icon: FileCheck },
-  { title: "Maintenance", description: "Entretien, detailing céramique, pneus.", icon: Settings },
-  { title: "Logistique", description: "Transport sécurisé et gardiennage confidentiel.", icon: Key },
+  { title: "Administratif", description: "Carte grise, assurance, importation, immatriculation provisoire (WW).", icon: FileCheck },
+  { title: "Maintenance", description: "Entretien, detailing, protection céramique, gestion des pneumatiques.", icon: Settings },
+  { title: "Logistique", description: "Transport sécurisé, stockage et gardiennage confidentiel*.", icon: Key },
 ];
 
 // Data for informational display only now
@@ -56,14 +56,14 @@ export const SOURCING_STEPS_DATA = [
 ];
 
 export const TIMELINE_STEPS: TimelineStep[] = [
-  { step: "01", title: "Cahier des charges", description: "Définition ultra-précise de vos critères et attentes." },
-  { step: "02", title: "Chasse & Audit", description: "Scan du marché européen et filtrage drastique." },
-  { step: "03", title: "Inspection", description: "Déplacement physique et rapport détaillé (+100 photos)." },
-  { step: "04", title: "Acquisition", description: "Négociation, sécurisation et livraison clé en main." },
+  { step: "01", title: "Cahier des charges", description: "Compréhension approfondie de vos attentes et contraintes." },
+  { step: "02", title: "Recherche & audit", description: "Sourcing ciblé à l’échelle européenne et filtrage drastique." },
+  { step: "03", title: "Inspection", description: "Déplacement sur site, vérifications complètes et rapport documenté." },
+  { step: "04", title: "Acquisition", description: "Négociation, sécurisation de la transaction et livraison clé en main." },
 ];
 
 export const STATS: StatItem[] = [
-  { value: "100%", label: "Transparence" },
+  { value: "100 %", label: "Transparence" },
   { value: "0", label: "Compromis" },
-  { value: "24/7", label: "Support" },
+  { value: "24/7", label: "Accompagnement" },
 ];

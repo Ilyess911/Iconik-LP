@@ -29,23 +29,41 @@ const Contact: React.FC<ContactProps> = ({ prefillMessage }) => {
           <Reveal>
             <div>
                 <h2 className="text-3xl font-bold text-white mb-6">Contactez-nous</h2>
-                <p className="text-zinc-400 mb-8 leading-relaxed">
-                Échangez avec des passionnés. Une réponse personnalisée sous 24h.
+                <p className="text-zinc-400 mb-8 leading-relaxed text-lg">
+                    Parlez-nous de votre projet.<br />
+                    Un expert Iconik vous répond personnellement sous 24 h.
                 </p>
                 
                 <div className="space-y-4">
-                <a href="mailto:iconikautomative@gmail.com" className="flex items-center gap-4 text-zinc-300 hover:text-white transition-colors p-4 rounded-2xl hover:bg-white/5 border border-transparent hover:border-white/10 glass-panel hover:bg-white/5">
-                    <Mail className="w-5 h-5" />
-                    <span>iconikautomative@gmail.com</span>
-                </a>
-                <a href="tel:+33663472173" className="flex items-center gap-4 text-zinc-300 hover:text-white transition-colors p-4 rounded-2xl hover:bg-white/5 border border-transparent hover:border-white/10 glass-panel hover:bg-white/5">
-                    <Phone className="w-5 h-5" />
-                    <span>+33 6 63 47 21 73</span>
-                </a>
-                <div className="flex items-center gap-4 text-zinc-300 p-4 rounded-2xl glass-panel">
-                    <MapPin className="w-5 h-5" />
-                    <span>Boulogne Billancourt</span>
-                </div>
+                    <a href="mailto:iconikautomative@gmail.com" className="flex items-start gap-5 text-zinc-300 hover:text-white transition-all p-5 rounded-2xl hover:bg-white/5 border border-transparent hover:border-white/10 glass-panel group">
+                        <div className="mt-1 w-10 h-10 rounded-full bg-white/5 flex items-center justify-center shrink-0 group-hover:bg-white/10 transition-colors border border-white/5">
+                             <Mail className="w-5 h-5 text-white" />
+                        </div>
+                        <div>
+                            <div className="text-xs font-medium text-zinc-500 uppercase tracking-wider mb-1">Email</div>
+                            <div className="text-lg font-medium text-white">iconikautomative@gmail.com</div>
+                        </div>
+                    </a>
+
+                    <a href="tel:+33663472173" className="flex items-start gap-5 text-zinc-300 hover:text-white transition-all p-5 rounded-2xl hover:bg-white/5 border border-transparent hover:border-white/10 glass-panel group">
+                        <div className="mt-1 w-10 h-10 rounded-full bg-white/5 flex items-center justify-center shrink-0 group-hover:bg-white/10 transition-colors border border-white/5">
+                            <Phone className="w-5 h-5 text-white" />
+                        </div>
+                        <div>
+                            <div className="text-xs font-medium text-zinc-500 uppercase tracking-wider mb-1">Téléphone</div>
+                            <div className="text-lg font-medium text-white">+33 6 63 47 21 73</div>
+                        </div>
+                    </a>
+
+                    <div className="flex items-start gap-5 text-zinc-300 p-5 rounded-2xl glass-panel group">
+                        <div className="mt-1 w-10 h-10 rounded-full bg-white/5 flex items-center justify-center shrink-0 group-hover:bg-white/10 transition-colors border border-white/5">
+                            <MapPin className="w-5 h-5 text-white" />
+                        </div>
+                        <div>
+                            <div className="text-xs font-medium text-zinc-500 uppercase tracking-wider mb-1">Localisation</div>
+                            <div className="text-lg font-medium text-white">Boulogne-Billancourt</div>
+                        </div>
+                    </div>
                 </div>
             </div>
           </Reveal>

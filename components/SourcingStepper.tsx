@@ -13,10 +13,11 @@ const SourcingStepper: React.FC = () => {
         
         <div className="text-center mb-16">
           <Reveal width="100%">
-            <span className="text-zinc-500 text-xs font-medium tracking-[0.2em] uppercase mb-4 block">Chasse automobile</span>
+            <span className="text-zinc-500 text-xs font-medium tracking-[0.2em] uppercase mb-4 block">Recherche personnalisée</span>
             <h2 className="text-3xl md:text-5xl font-bold text-white mb-6">Recherche personnalisée</h2>
             <p className="text-zinc-400 max-w-2xl mx-auto text-lg">
-                Vous avez une idée précise en tête ? Confiez-nous vos critères. Nous activons notre réseau européen pour trouver la perle rare qui correspond exactement à vos attentes.
+                Quand le véhicule idéal n’est pas en ligne, il se cherche.
+                Nous activons notre réseau européen pour trouver une configuration fidèle à vos exigences, sans compromis.
             </p>
           </Reveal>
         </div>
@@ -36,7 +37,7 @@ const SourcingStepper: React.FC = () => {
                                 </div>
                                 <div>
                                     <h4 className="text-white font-bold mb-1">Configuration sur mesure</h4>
-                                    <p className="text-zinc-400 text-sm">Définissez vos options, couleurs, motorisation et kilométrage idéal.</p>
+                                    <p className="text-zinc-400 text-sm">Motorisation, options, teinte, kilométrage : chaque détail est maîtrisé.</p>
                                 </div>
                             </div>
                             <div className="flex items-start gap-4">
@@ -44,8 +45,8 @@ const SourcingStepper: React.FC = () => {
                                     <Search className="w-5 h-5 text-white" />
                                 </div>
                                 <div>
-                                    <h4 className="text-white font-bold mb-1">Réseau Européen</h4>
-                                    <p className="text-zinc-400 text-sm">Accès aux marchés cachés et aux stocks hors-marché (off-market).</p>
+                                    <h4 className="text-white font-bold mb-1">Réseau européen</h4>
+                                    <p className="text-zinc-400 text-sm">Accès privilégié à des véhicules off-market et à des stocks professionnels confidentiels.</p>
                                 </div>
                             </div>
                             <div className="flex items-start gap-4">
@@ -53,8 +54,8 @@ const SourcingStepper: React.FC = () => {
                                     <Target className="w-5 h-5 text-white" />
                                 </div>
                                 <div>
-                                    <h4 className="text-white font-bold mb-1">Zéro Mauvaise surprise</h4>
-                                    <p className="text-zinc-400 text-sm">Inspection physique systématique et rapport détaillé avant achat.</p>
+                                    <h4 className="text-white font-bold mb-1">Zéro mauvaise surprise</h4>
+                                    <p className="text-zinc-400 text-sm">Inspection physique complète et rapport transparent avant engagement.</p>
                                 </div>
                             </div>
                         </div>
@@ -67,7 +68,7 @@ const SourcingStepper: React.FC = () => {
                                 </Button>
                              </a>
                              <p className="mt-4 text-xs text-zinc-500">
-                                Formulaire sécurisé • Réponse sous 24h
+                                Formulaire sécurisé • Retour sous 24 h
                              </p>
                         </div>
                     </div>
@@ -81,11 +82,11 @@ const SourcingStepper: React.FC = () => {
                         <div className="absolute bottom-6 left-6 right-6">
                             <div className="glass-panel p-4 rounded-xl border border-white/10">
                                 <div className="flex justify-between items-center mb-2">
-                                    <span className="text-xs font-medium text-zinc-300 uppercase tracking-wider">Dernière Recherche</span>
+                                    <span className="text-xs font-medium text-zinc-300 uppercase tracking-wider">Dernière recherche</span>
                                     <span className="w-2 h-2 rounded-full bg-green-500 animate-pulse" />
                                 </div>
                                 <div className="text-white font-bold text-lg">Renault Clio V Intens</div>
-                                <div className="text-zinc-400 text-sm">Recherche validée en 48h</div>
+                                <div className="text-zinc-400 text-sm">Dossier validé en 48 h</div>
                             </div>
                         </div>
                     </div>

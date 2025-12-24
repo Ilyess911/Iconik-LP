@@ -8,8 +8,11 @@ const Process: React.FC = () => {
     <Section id="process">
       <div className="text-center mb-20">
         <Reveal width="100%">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">Notre Processus</h2>
-            <p className="text-zinc-400">Simple, transparent, efficace.</p>
+            <h2 className="text-3xl md:text-5xl font-bold text-white mb-6">Notre processus</h2>
+            <div className="text-xl md:text-2xl text-white font-medium mb-4">Simple. Transparent. Efficace.</div>
+            <p className="text-zinc-400 max-w-2xl mx-auto text-lg leading-relaxed">
+                Chaque étape est pensée pour éliminer l’incertitude et sécuriser votre décision.
+            </p>
         </Reveal>
       </div>
 
